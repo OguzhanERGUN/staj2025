@@ -38,10 +38,11 @@ gözle görülür bir fark yaratmaz.
 
 Bu projeyi Samsung A23 gibi bir cihazda çalıştırmak istesek ne gibi optimizasyonlar gerekir?,
 
-1.Hedeflenen proje bir mobil oyun ise ray atılan noktayı mouse ile referans almak yerine (Camera.main.ScreenPointToRay(Input.mousePosition))
+1. Hedeflenen proje bir mobil oyun ise ray atılan noktayı mouse ile referans almak yerine (Camera.main.ScreenPointToRay(Input.mousePosition))
 benzer şekilde telefon ekranının dokunulduğu noktayı referans alması doğru olacaktır (Camera.main.ScreenPointToRay(touch.position))
 Bunun yanında farklı fonksiyonlar kullanarak çoklu tıklama ve tıklamaları takip etme gibi işlevler eklenebilir.(Telefon multitouch özelliği içeriyor.).
-2.Telefon teknik özellikleri incelendiğinde, 1080x2408 ve 90 Hz yenileme hızına sahip olduğunu gördüm. Oyun Editör Profiler penceresinde incelediğinde değerler telefon ile aynı olamayacağından projenin varsa uygun bir simulator veya telefon ile test edilmesi ve optimizasyon
+
+2. Telefon teknik özellikleri incelendiğinde, 1080x2408 ve 90 Hz yenileme hızına sahip olduğunu gördüm. Oyun Editör Profiler penceresinde incelediğinde değerler telefon ile aynı olamayacağından projenin varsa uygun bir simulator veya telefon ile test edilmesi ve optimizasyon
 
 ayarlarının değiştirilmesi gerekir. (Proje grafik seviyesi yüksek kabul edilebilir seviyede ve görsel düzenlemeler yapılabilir.).
 2. UI elementleri ekran boyutuna uygun hale getirilmeli.
@@ -52,7 +53,11 @@ ayarlarının değiştirilmesi gerekir. (Proje grafik seviyesi yüksek kabul edi
    
 5. Harita boyutuna ve oyun mekaniğine göre oldukça değişiklik göstersede, aynı anda birçok obje bulundurmak yerine ihtiyaç duydukça nesnelerin oluşturulması (Object Pooling gibi tekniklerle) veya farklı sahneler arası yükleme ekranı ile geçiş sağlanması oyunun performansını olumlu etkiler.
 
+Tüm kameraları (3 kamerayı) bir arada TV ekranında aynı anda görebileceğimiz bir opsiyonu nasıl ekleyebiliriz?
 
+1. Oyunda tek oyuncu bulunduğu ve hareket eden tek nesne olduğu için oyuncu kameranın görüşünde değilse kameranın gerçek zamanlı görüntüsü yerine, görüntünün sabit bir kopyasını gösterebiliriz.
+2. Kamera görüntü çözünürlüğünü ve yenileme hızını düzenleyebiliriz bu sayede iş yükü azaltılmış olur
+3. Araştırmalarım sonucu 3 kameranın ayrı ayrı kullanılması yerine tek kameranın farklı pozisyonlara taşınarak görüntü almasının daha optimize olduğunu gördüm
  
 
 
