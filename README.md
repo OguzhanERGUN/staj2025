@@ -36,7 +36,8 @@ fonksiyon tek frame de çalışarak sürekli mesafe hesaplamadan kaçınmamızı
 3. Etkileşime geçmek için IPointer Interface kullanılabilir, bu yöntemde temelinde ray kullanan bir yapı olduğundan arayüz anlamında bize kolaylık sağlasada (manual olarak ray yazmamız gerekmez sadece fonksiyonun görevini tanımlamamız yeterli.) performans anlamında 
 gözle görülür bir fark yaratmaz.
 
-Bu projeyi Samsung A23 gibi bir cihazda çalıştırmak istesek ne gibi optimizasyonlar gerekir?
+Bu projeyi Samsung A23 gibi bir cihazda çalıştırmak istesek ne gibi optimizasyonlar gerekir?,
+
 1.Hedeflenen proje bir mobil oyun ise ray atılan noktayı mouse ile referans almak yerine (Camera.main.ScreenPointToRay(Input.mousePosition))
 benzer şekilde telefon ekranının dokunulduğu noktayı referans alması doğru olacaktır (Camera.main.ScreenPointToRay(touch.position))
 Bunun yanında farklı fonksiyonlar kullanarak çoklu tıklama ve tıklamaları takip etme gibi işlevler eklenebilir.(Telefon multitouch özelliği içeriyor.)
