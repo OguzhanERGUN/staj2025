@@ -42,10 +42,14 @@ Bu projeyi Samsung A23 gibi bir cihazda çalıştırmak istesek ne gibi optimiza
 benzer şekilde telefon ekranının dokunulduğu noktayı referans alması doğru olacaktır (Camera.main.ScreenPointToRay(touch.position))
 Bunun yanında farklı fonksiyonlar kullanarak çoklu tıklama ve tıklamaları takip etme gibi işlevler eklenebilir.(Telefon multitouch özelliği içeriyor.).
 2.Telefon teknik özellikleri incelendiğinde, 1080x2408 ve 90 Hz yenileme hızına sahip olduğunu gördüm. Oyun Editör Profiler penceresinde incelediğinde değerler telefon ile aynı olamayacağından projenin varsa uygun bir simulator veya telefon ile test edilmesi ve optimizasyon
+
 ayarlarının değiştirilmesi gerekir. (Proje grafik seviyesi yüksek kabul edilebilir seviyede ve görsel düzenlemeler yapılabilir.).
 2. UI elementleri ekran boyutuna uygun hale getirilmeli.
+
 3. Harita statik olduğundan gölge ve ışıklar kesinlikle bake edilmeli ve runtime da hesaplanmamalı, bu büyük bir maliyet oluşturur.
+   
 4. Mobil oyunların geneli 60 fps tasarlanır bu yüzden 90 hz yenileme mümkün olsada bunu 60 Hz ile kısıtlandırmak (veya oyuncu için ayarlanabilir kılmak) performansı olumlu etkiler.
+   
 5. Harita boyutuna ve oyun mekaniğine göre oldukça değişiklik göstersede, aynı anda birçok obje bulundurmak yerine ihtiyaç duydukça nesnelerin oluşturulması (Object Pooling gibi tekniklerle) veya farklı sahneler arası yükleme ekranı ile geçiş sağlanması oyunun performansını olumlu etkiler.
 
 
